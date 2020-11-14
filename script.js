@@ -7,6 +7,14 @@ var lowerCase = ["a","b","c","d","e","f","g","h","i","j","k","l","m","n","o","p"
 var upperCase = ["A","B","C","D","E","F","G","H","I","J","K","L","M","N","O","P","Q","R","S","T","U","V","W","X","Y","Z"]
 var specialChar = ["!","@","#","$","^","&","*","(",")","-","_","+","=","{","}","[","]","|",";",":","'","<",">","?","/","~","`"];
 
+//Variable Declarations
+var comfirmLength = "";
+var comfirmSpecialCharacter;
+var confirmNumber;
+var confirmUpperCase;
+var confirmLowerCase;
+
+
 // Write password to the #password input
 function writePassword() {
   var password = generatePassword();
