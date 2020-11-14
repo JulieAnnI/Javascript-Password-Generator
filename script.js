@@ -9,33 +9,40 @@ var specialChar = ["!","@","#","$","^","&","*","(",")","-","_","+","=","{","}","
 
 //Variable Declarations
 var confirmLength = "";
-var confirmspecialCharacter;
+var confirmSpecialChar;
 var confirmNumber;
 var confirmUpperCase;
 var confirmLowerCase;
 
 //Prompt to determine how many characters the user would like in their password
-function generatePassword() {
+function writePassword() {
   var confirmLength = (prompt("How many characters would you like your password to contain? (Must be between 8-128 characters)"))
+  
   //If outside parameters of 8-128 characters
-  if (length < 8) {
-    alert("The password must be at least 8 characters")
+  while(confirmLength <= 7 || confirmLength >=129) {
+    alert("Password must be between 8-128 characters")
+    return
   }
-  if (length > 128) {
-    alert("The password must not be longer than 128 characters")
-  }
-  }
+    //Parameters of Password
+    var confirmLowerCase = confirm("Would you like lowercase characters in your password?")
+    var confirmUpperCase = confirm("Would you like uppercase characters in your password?")
+    var confirmNumber = confirm("Would you like numbers in your password?")
+    var confirmSpecialChar = confirm("Would you like special characters in your password?")
+    //If no parameters are selected
+    while(confirmUpperCase === false && confirmLowerCase === false && confirmSpecialChar === false && confirmNumber === false) {
+      alert("You must choose at least one parameter");
+      return
+    }
 }
+
+
+
+
+//Define Parameters of Password
 
 
 // Write password to the #password input
-function writePassword() {
-  var password = generatePassword();
-  var passwordText = document.querySelector("#password");
 
-  passwordText.value = password;
-
-}
 
 // Add event listener to generate button
 generateBtn.addEventListener("click", writePassword);
