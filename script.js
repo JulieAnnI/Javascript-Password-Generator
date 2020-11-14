@@ -9,7 +9,7 @@ var specialChar = ["!","@","#","$","^","&","*","(",")","-","_","+","=","{","}","
 
 //Variable Declarations
 var confirmLength = "";
-var comfirmSpecialCharacter;
+var confirmspecialCharacter;
 var confirmNumber;
 var confirmUpperCase;
 var confirmLowerCase;
@@ -18,11 +18,15 @@ var confirmLowerCase;
 function generatePassword() {
   var confirmLength = (prompt("How many characters would you like your password to contain? (Must be between 8-128 characters)"))
   //If outside parameters of 8-128 characters
-  while(confirmLength <= 7 || confirmLength >=129) {
-    alert("Password must be between 8-128 characters")
-    var confirmLength = generatePassword();
+  if (length < 8) {
+    alert("The password must be at least 8 characters")
+  }
+  if (length > 128) {
+    alert("The password must not be longer than 128 characters")
+  }
   }
 }
+
 
 // Write password to the #password input
 function writePassword() {
