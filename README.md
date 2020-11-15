@@ -15,10 +15,10 @@ Usage
 The purpose of the project is to take existing HTML and CSS files and add a functioning Javascript file that follows the critera of the client. The first photo displays the existing HTML and CSS file I had to work with. The second displays the prompt desired by the client to choose the length of your password between 8-128 characters by entering the desired length in the text box. If a length is choosen outside of those parameters, an alert will pop-up stating this issue and the user will return to homescreen. Once the length is selected, four more prompts will follow asking the user what parameters they desire for the password. An example of this is shown in the third image below. These parameters are whether the user wants lowercase, uppercase, numeric, or special characters in their password. They can choose any of these options, however, if they select none of these parameters, an alert will notify them that they must select at least one and they will be returned to the homepage. Once these parameters are selected, the randomly generated password will be displayed on the page in the text box. An example of this can be seen in the fourth image. 
 
 
-![PassGen1](images\PassGen1.png)
-![PassGen2](images\PassGen2.png)
-![PassGen3](images\PassGen3.png)
-![PassGen4](images\PassGen4.png)
+![PassGen1](images/PassGen1.png)
+![PassGen2](images/PassGen2.png)
+![PassGen3](images/PassGen3.png)
+![PassGen4](images/PassGen4.png)
 
 Credits
 Thank you to my instructor and TA's who helped answer questions and taught me how to make this project possible. Completing this project would not have been possible without guidance from my father, a fellow Programmer, who helped me break down the function of actually creating the random password into smaller steps.  
