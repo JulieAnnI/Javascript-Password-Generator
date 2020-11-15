@@ -6,6 +6,8 @@ var number = ["0","1","2","3","4","5","6","7","8","9"];
 var lowerCase = ["a","b","c","d","e","f","g","h","i","j","k","l","m","n","o","p","q","r","s","t","u","v","w","x","y","z"];
 var upperCase = ["A","B","C","D","E","F","G","H","I","J","K","L","M","N","O","P","Q","R","S","T","U","V","W","X","Y","Z"];
 var specialChar = ["!","@","#","$","^","&","*","(",")","-","_","+","=","{","}","[","]","|",";",":","'","<",">","?","/","~","`"];
+
+//Variables
 var finalPassword = "";
 var newPassLength = 0;
 var ran4 = ["1","2","3","4"];
@@ -21,7 +23,7 @@ while(passLength <= 7 || passLength >= 129) {
   return; 
 }
 
-//Turn password Length into an integer
+//Turns password length into an integer
 newPassLength = parseInt(passLength);
 console.log(newPassLength);
 
@@ -38,11 +40,13 @@ console.log(newPassLength);
 
   }
 
-  
+  //While Loop for generating random Password based on Parameters selected
   while (newPassLength > 0) {
 
+    //Gives random number 1-4
     var randomValue = ran4[Math.floor(Math.random()*ran4.length)];
 
+    //If statements for all arrays
     if (confirmLowerCase == true && randomValue == "1") {
       var random = lowerCase[Math.floor(Math.random()*lowerCase.length)];
 
@@ -88,6 +92,8 @@ console.log(newPassLength);
     continue;
     }
   }
+
+  //Displays result in text box
   document.getElementById("password").textContent = finalPassword; 
 
 }
